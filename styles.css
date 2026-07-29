@@ -1,0 +1,150 @@
+/* ---------- General Styles ---------- */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+    color: Magenta;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+/* ---------- Navigation ---------- */
+
+nav {
+    background-color: Purple;
+    padding: 16px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color:pink;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ---------- Class Selector ---------- */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 32px 16px;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+/* ---------- ID Selector ---------- */
+
+#hero {
+    background-color: greenyellow;
+    color: grey;
+    text-align: center;
+    padding: 64px 24px;
+}
+
+/* ---------- Flexbox Layout ---------- */
+
+.columns {
+    display: flex;
+    gap: 24px;
+}
+
+.column {
+    flex: 1;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+    display: inline-block;
+    background-color: yellow;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color:orange;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: ;
+    color: yellow;
+    text-align: center;
+    padding: 24px;
+    margin-top: 32px;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 768px) {
+
+    .columns {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #hero {
+        padding: 48px 16px;
+    }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 320px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 16px 8px;
+    }
+
+    nav {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
