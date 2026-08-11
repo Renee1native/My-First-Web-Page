@@ -1,5 +1,4 @@
 ```css
-/* ---------- General Styles ---------- */
 
 * {
     box-sizing: border-box;
@@ -57,7 +56,7 @@ nav a:hover {
     color: black;
 }
 
-/* ---------- Container ---------- */
+
 
 .container {
     width: 90%;
@@ -66,7 +65,7 @@ nav a:hover {
     padding: 32px 16px;
 }
 
-/* ---------- Cards ---------- */
+
 
 .card {
     background-color: white;
@@ -85,7 +84,6 @@ nav a:hover {
     padding: 64px 24px;
 }
 
-/* ---------- Welcome Section ---------- */
 
 #welcome {
     background-color: magenta;
@@ -106,7 +104,7 @@ img {
     display: block;
 }
 
-/* ---------- Sections ---------- */
+
 
 section {
     background-color: white;
@@ -115,7 +113,7 @@ section {
     margin: 20px 0;
 }
 
-/* ---------- Flexbox Multi-Column Layout ---------- */
+
 
 .columns {
     display: flex;
@@ -127,7 +125,6 @@ section {
     flex: 1 1 300px;
 }
 
-/* ---------- Buttons ---------- */
 
 .button {
     display: inline-block;
@@ -143,7 +140,6 @@ section {
     background-color: orange;
 }
 
-/* ---------- Footer ---------- */
 
 footer {
     background-color: purple;
@@ -153,7 +149,6 @@ footer {
     margin-top: 32px;
 }
 
-/* ---------- Desktop 1200px ---------- */
 
 @media (min-width: 1200px) {
     .columns {
@@ -165,10 +160,9 @@ footer {
     }
 }
 
-/* ---------- Tablet 768px ---------- */
-
 @media (max-width: 768px) {
     .columns {
+
         flex-direction: column;
     }
 
@@ -182,7 +176,6 @@ footer {
     }
 }
 
-/* ---------- Mobile 320px ---------- */
 
 @media (max-width: 480px) {
     body {
