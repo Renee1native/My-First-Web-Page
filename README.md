@@ -1,6 +1,8 @@
 Errors: I was given 2 errors, one for contrasting colors, which was fixed by changing the colors through VS code so that the page was more readable.
 The second was the image alt text. I uploaded a new image, then made sure to fix the alt text to take out the word "Image" and put "cartoon computer waving". Taking out the word "Image" on the alt text fixed the error.
+
 Visual Design
+
 Gestalt Principles: 1. Proximity keeps related content close together inside each section 2. Similarity gives related section/cards the same styling
 
 Proximity: I used proximity to keep related content close together within each section. For example, the heading, paragraph, and image in the About Me section are grouped together so viewers  can easily see that they belong to the same topic.                                                                                        
