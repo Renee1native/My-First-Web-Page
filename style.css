@@ -1,3 +1,4 @@
+```css
 /* ---------- General Styles ---------- */
 
 * {
@@ -26,7 +27,6 @@ p {
     font-size: 18px;
     margin-bottom: 16px;
 }
-
 
 /* ---------- Navigation ---------- */
 
@@ -57,7 +57,6 @@ nav a:hover {
     color: black;
 }
 
-
 /* ---------- Container ---------- */
 
 .container {
@@ -67,7 +66,6 @@ nav a:hover {
     padding: 32px 16px;
 }
 
-
 /* ---------- Cards ---------- */
 
 .card {
@@ -75,19 +73,17 @@ nav a:hover {
     padding: 24px;
     margin-bottom: 24px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 /* ---------- Hero Section ---------- */
 
 #hero {
-    background-color:whitesmoke;
-    color:black;
+    background-color: whitesmoke;
+    color: black;
     text-align: center;
     padding: 64px 24px;
 }
-
 
 /* ---------- Welcome Section ---------- */
 
@@ -98,7 +94,6 @@ nav a:hover {
     padding: 20px;
     margin: 20px 0;
 }
-
 
 /* ---------- Images ---------- */
 
@@ -111,7 +106,6 @@ img {
     display: block;
 }
 
-
 /* ---------- Sections ---------- */
 
 section {
@@ -120,7 +114,6 @@ section {
     padding: 20px;
     margin: 20px 0;
 }
-
 
 /* ---------- Flexbox Multi-Column Layout ---------- */
 
@@ -133,7 +126,6 @@ section {
 .column {
     flex: 1 1 300px;
 }
-
 
 /* ---------- Buttons ---------- */
 
@@ -151,7 +143,6 @@ section {
     background-color: orange;
 }
 
-
 /* ---------- Footer ---------- */
 
 footer {
@@ -162,11 +153,9 @@ footer {
     margin-top: 32px;
 }
 
-
 /* ---------- Desktop 1200px ---------- */
 
 @media (min-width: 1200px) {
-
     .columns {
         flex-direction: row;
     }
@@ -174,14 +163,11 @@ footer {
     .column {
         min-height: 250px;
     }
-
 }
-
 
 /* ---------- Tablet 768px ---------- */
 
 @media (max-width: 768px) {
-
     .columns {
         flex-direction: column;
     }
@@ -194,14 +180,11 @@ footer {
     #hero {
         padding: 48px 16px;
     }
-
 }
-
 
 /* ---------- Mobile 320px ---------- */
 
 @media (max-width: 480px) {
-
     body {
         font-size: 14px;
     }
@@ -228,5 +211,5 @@ footer {
         width: 100%;
         text-align: center;
     }
-
 }
+```
