@@ -46,3 +46,20 @@ removeSkillButton.addEventListener("click", () => {
     const fullSkillList = document.querySelectorAll("#item-list li");
     fullSkillList[fullSkillList.length - 1].remove();
 })
+//-----------------------------------------------------------------------//
+ const contactForm = document.querySelector("#contact-form");
+
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    
+    const nameInput = document.querySelector("#name");
+    const errorMessage = document.querySelector("#name-error");
+  
+    if (nameInput.value.trim() === ""){
+      errorMessage.textContent = "Error: Name cannot be empty";
+     } else{
+          console.log('Accepted: ${nameInput.value}');
+          nameInput.value = "";
+          errorMessage.textContent = "";
+    }
+})
