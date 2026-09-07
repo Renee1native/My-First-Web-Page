@@ -1,4 +1,4 @@
-```css
+
 
 * {
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
     font-family: "Arial", "Helvetica", sans-serif;
     background-color: white;
-    color: #333;
+    color: blue;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -15,10 +15,9 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     font-family: "Arial", sans-serif;
-    color: blue;
+    color: blueviolet;
     text-align: center;
 }
 
@@ -53,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: yellow;
+    background-color: pink;
     color: black;
 }
 
@@ -220,4 +219,4 @@ footer {
         text-align: center;
     }
 }
-```
+
