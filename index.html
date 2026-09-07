@@ -7,81 +7,67 @@
 
     <title>Renee Herrera - IT Student</title>
 
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Header -->
     <header>
         <h1>Renee Herrera - IT Student</h1>
 
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#goals">Career Goals</a></li>
+                <li><a href="#future">Career Goals</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
+
+    <!-- Main Content -->
     <main>
 
-        <section id="about">
+        <!-- About Me -->
+        <section id="about" class="full-width">
             <h2>About Me</h2>
-              I'm an IT student who enjoys learning about technology and programming.
+
+            <p>
+                I'm an IT student who enjoys learning about technology and programming.
                 I have a passion for problem-solving and am always eager to take on new
                 challenges. In my free time, I like to explore new programming languages
                 and work on personal projects to improve my skills.
             </p>
 
-            <img src="computer.webp"
-                 alt="Cartoon computer waving"
-                 width="300s"
-                 height="200">
-                
-          
+            <img
+                src="computer.webp"
+                alt="Cartoon computer waving"
+                width="300"
+                height="200">
         </section>
 
-             <section id="Future">
-           
-                <h2>My Future</h2>
 
-                <p>
-                    My ultimate goal is to earn a degree and begin a career in IT or cybersecurity.
-                    I hope to continue learning about new technologies throughout my career.
-                </p>
-            </article>
+        <!-- Future / Career Goals -->
+        <section id="future">
+            <h2>My Future</h2>
+
+            <p>
+                My ultimate goal is to earn a degree and begin a career in IT or
+                cybersecurity. I hope to continue learning about new technologies
+                throughout my career.
+            </p>
         </section>
 
-         <section>
-    <h2>Contact Form</h2>
 
-    <form id="contact-form" novalidate>
-      <label for="name">Name:</label>
-      <input type="text" id="name" required/>
-      <span class="error-text" id="name-error"></span>
-
-      <br />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" required/>
-      <span class="error-text" id="email-error"></span>
-
-      <br />
-
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-</body>
-</html>
-
-
+        <!-- Skills -->
         <section id="skills">
             <h2>Skills I am Learning</h2>
 
@@ -93,79 +79,121 @@
                 <li>JavaScript</li>
             </ul>
         </section>
-  <section>
-    <h2>Dynamic List</h2>
-    <label for="item-input">Add a skill:</label>
-    <input type="text" id="item-input" placeholder="e.g. HTML" />
-    <button id="add-item-button">Add Item</button>
-    <button id="remove-item-button">Remove Item</button>
-   
-    <ul id="item-list">
-        <li>Static Item</li>
-    </ul>
-
-  </section>
 
 
-  <section>
-    <h2>Click to Change Content</h2>
-    <button id="click-button">Click me</button>
-    <p id="message">Nothing clicked yet.</p>
-  </section>
+        <!-- Dynamic List -->
+        <section id="dynamic-list">
+            <h2>Dynamic List</h2>
 
-  <section>
+            <label for="item-input">Add a skill:</label>
 
-    <h2>Type to See a Style Change</h2>
-    <label for="name-input">Your name:</label>
-    <input type="text" id="name-input" placeholder="Start typing..." />
-  </section>
-        
+            <input
+                type="text"
+                id="item-input"
+                placeholder="e.g. HTML">
+
+            <button type="button" id="add-item-button">
+                Add Item
+            </button>
+
+            <button type="button" id="remove-item-button">
+                Remove Item
+            </button>
+
+            <ul id="item-list">
+                <li>Static Item</li>
+            </ul>
+        </section>
 
 
-        <section id="contact">
+        <!-- Change Content -->
+        <section id="interactive-content">
+            <h2>Click to Change Content</h2>
+
+            <button type="button" id="click-button">
+                Click Me
+            </button>
+
+            <p id="message">
+                Nothing clicked yet.
+            </p>
+        </section>
+
+
+        <!-- Style Change -->
+        <section id="style-change">
+            <h2>Type to See a Style Change</h2>
+
+            <label for="name-input">Your name:</label>
+
+            <input
+                type="text"
+                id="name-input"
+                placeholder="Start typing...">
+        </section>
+
+
+        <!-- Contact Form -->
+        <section id="contact" class="full-width">
             <h2>Contact Me</h2>
 
             <p>
                 If you would like to get in touch, please fill out the form below.
             </p>
 
-            <form action="#" method="post">
+            <form id="contact-form" novalidate>
 
                 <fieldset>
                     <legend>Contact Information</legend>
 
-                    <div>
-                        <label for="name">Full Name</label>
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="contact-name">
+                            Full Name
+                        </label>
+
                         <input
                             type="text"
-                            id="name"
+                            id="contact-name"
                             name="name"
                             autocomplete="name"
                             required
-                            aria-describedby="name-error">
+                            aria-describedby="contact-name-error">
 
-                        <p id="name-error" class="error-message">
-                            Please enter your full name.
+                        <p
+                            id="contact-name-error"
+                            class="error-message">
                         </p>
                     </div>
 
-                    <div>
-                        <label for="email">Email Address</label>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="contact-email">
+                            Email Address
+                        </label>
+
                         <input
                             type="email"
-                            id="email"
+                            id="contact-email"
                             name="email"
                             autocomplete="email"
                             required
-                            aria-describedby="email-error">
+                            aria-describedby="contact-email-error">
 
-                        <p id="email-error" class="error-message">
-                            Please enter a valid email address.
+                        <p
+                            id="contact-email-error"
+                            class="error-message">
                         </p>
                     </div>
 
-                    <div>
-                        <label for="subject">Subject</label>
+
+                    <!-- Subject -->
+                    <div class="form-group">
+                        <label for="subject">
+                            Subject
+                        </label>
+
                         <input
                             type="text"
                             id="subject"
@@ -173,40 +201,62 @@
                             required
                             aria-describedby="subject-error">
 
-                        <p id="subject-error" class="error-message">
-                            Please enter a subject.
+                        <p
+                            id="subject-error"
+                            class="error-message">
                         </p>
                     </div>
 
-                    <div>
-                        <label for="message">Message</label>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="contact-message">
+                            Message
+                        </label>
+
                         <textarea
-                            id="message"
+                            id="contact-message"
                             name="message"
                             rows="6"
                             required
-                            aria-describedby="message-error"></textarea>
+                            aria-describedby="contact-message-error"></textarea>
 
-                        <p id="message-error" class="error-message">
-                            Please enter a message.
+                        <p
+                            id="contact-message-error"
+                            class="error-message">
                         </p>
                     </div>
 
-                    <button type="submit">Send Message</button>
+
+                    <!-- Submit -->
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                    <p
+                        id="success-message"
+                        class="success-message">
+                    </p>
 
                 </fieldset>
 
             </form>
         </section>
-
     </main>
 
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Renee Herrera. All rights reserved.</p>
+        <p>
+            &copy; 2026 Renee Herrera. All rights reserved.
+        </p>
     </footer>
 
-<script src="script.js"></script>
-</body>
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
 </html>
-```
+
+

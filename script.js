@@ -1,65 +1,254 @@
-// variables
 const clickedText = document.querySelector("#message");
 const clickMeButton = document.querySelector("#click-button");
 
 let counter = 0;
 
-// event listener
 clickMeButton.addEventListener("click", () => {
     counter = counter + 1;
-    clickedText.textContent = `This has been clicked ${counter} times.`;
-})
 
-//-----------------------------------------------------------------------//
+    clickedText.textContent =
+        `This has been clicked ${counter} times.`;
+});
+
+
+
+
 const styleTextBox = document.querySelector("#name-input");
 
-const myClassList = ["valid-input1","valid-input2","valid-input3"]//array
+const myClassList = [
+    "valid-input1",
+    "valid-input2",
+    "valid-input3"
+];
 
 let indexForClass = 0;
 
-
 styleTextBox.addEventListener("input", () => {
-    styleTextBox.classList.remove(myClassList[indexForClass]);
-    indexForClass = (indexForClass + 1) % 3; // Modulo
-    styleTextBox.classList.add(myClassList[indexForClass]);
-})
+
+   
+    styleTextBox.classList.remove(
+        myClassList[indexForClass]
+    );
 
 
-//-----------------------------------------------------------------------//
+    indexForClass =
+        (indexForClass + 1) % myClassList.length;
+
+
+    styleTextBox.classList.add(
+        myClassList[indexForClass]
+    );
+});
+
+
+
+
 const skillInput = document.querySelector("#item-input");
 const addSkillButton = document.querySelector("#add-item-button");
+const removeSkillButton =
+    document.querySelector("#remove-item-button");
+
 const skillList = document.querySelector("#item-list");
 
+
+
 addSkillButton.addEventListener("click", () => {
-    const newSkillValue = skillInput.value;
+
+    const newSkillValue = skillInput.value.trim();
+
+
+    if (newSkillValue === "") {
+        return;
+    }
+
 
     const newSkillItem = document.createElement("li");
+
     newSkillItem.textContent = newSkillValue;
 
     skillList.appendChild(newSkillItem);
+
+
     skillInput.value = "";
+});
 
-})
 
-const removeSkillButton = document.querySelector("#remove-item-button");
 removeSkillButton.addEventListener("click", () => {
-    const fullSkillList = document.querySelectorAll("#item-list li");
-    fullSkillList[fullSkillList.length - 1].remove();
-})
-//-----------------------------------------------------------------------//
- const contactForm = document.querySelector("#contact-form");
+
+    const fullSkillList =
+        document.querySelectorAll("#item-list li");
+
+
+    if (fullSkillList.length > 0) {
+        fullSkillList[fullSkillList.length - 1].remove();
+    }
+});
+
+
+
+
+const contactForm =
+    document.querySelector("#contact-form");
+
+const contactName =
+    document.querySelector("#contact-name");
+
+const contactEmail =
+    document.querySelector("#contact-email");
+
+const subject =
+    document.querySelector("#subject");
+
+const contactMessage =
+    document.querySelector("#contact-message");
+
+const successMessage =
+    document.querySelector("#success-message");
+
+
 
 contactForm.addEventListener("submit", (event) => {
+
+
     event.preventDefault();
-    
-    const nameInput = document.querySelector("#name");
-    const errorMessage = document.querySelector("#name-error");
-  
-    if (nameInput.value.trim() === ""){
-      errorMessage.textContent = "Error: Name cannot be empty";
-     } else{
-          console.log('Accepted: ${nameInput.value}');
-          nameInput.value = "";
-          errorMessage.textContent = "";
+
+    let hasError = false;
+
+
+ 
+
+    const nameError =
+        document.querySelector("#contact-name-error");
+
+    if (contactName.value.trim() === "") {
+
+        nameError.textContent =
+            "Error: Name cannot be empty.";
+
+        hasError = true;
+
+    } else {
+
+        nameError.textContent = "";
     }
-})
+
+
+ 
+
+    const emailError =
+        document.querySelector("#contact-email-error");
+
+    if (contactEmail.value.trim() === "") {
+
+        emailError.textContent =
+            "Error: Email cannot be empty.";
+
+        hasError = true;
+
+    } else if (!contactEmail.value.includes("@")) {
+
+        emailError.textContent =
+            "Error: Please enter a valid email address.";
+
+        hasError = true;
+
+    } else {
+
+        emailError.textContent = "";
+    }
+
+
+   
+
+    const subjectError =
+        document.querySelector("#subject-error");
+
+    if (subject.value.trim() === "") {
+
+        subjectError.textContent =
+            "Error: Subject cannot be empty.";
+
+        hasError = true;
+
+    } else {
+
+        subjectError.textContent = "";
+    }
+
+
+
+
+    const messageError =
+        document.querySelector("#contact-message-error");
+
+    if (contactMessage.value.trim() === "") {
+
+        messageError.textContent =
+            "Error: Message cannot be empty.";
+
+        hasError = true;
+
+    } else {
+
+        messageError.textContent = "";
+    }
+
+
+
+    if (!hasError) {
+
+        successMessage.textContent =
+            "Accepted! Your message was submitted successfully.";
+
+        // Clear the form
+        contactForm.reset();
+
+    } else {
+
+        successMessage.textContent = "";
+    }
+});
+
+
+
+
+// Clear name error
+contactName.addEventListener("input", () => {
+
+    document.querySelector("#contact-name-error")
+        .textContent = "";
+
+    successMessage.textContent = "";
+});
+
+
+// Clear email error
+contactEmail.addEventListener("input", () => {
+
+    document.querySelector("#contact-email-error")
+        .textContent = "";
+
+    successMessage.textContent = "";
+});
+
+
+// Clear subject error
+subject.addEventListener("input", () => {
+
+    document.querySelector("#subject-error")
+        .textContent = "";
+
+    successMessage.textContent = "";
+});
+
+
+// Clear message error
+contactMessage.addEventListener("input", () => {
+
+    document.querySelector("#contact-message-error")
+        .textContent = "";
+
+    successMessage.textContent = "";
+});
+
+
