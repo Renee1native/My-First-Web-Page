@@ -70,6 +70,15 @@ section h2 {
 }
 
 
+
+
+section h3 {
+    font-family: "Poppins", Arial, sans-serif;
+    color: purple;
+}
+
+
+
 /* Sections that should use the entire width */
 .full-width {
     grid-column: 1 / -1;
