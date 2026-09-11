@@ -1,7 +1,7 @@
 /* Header */
 header {
     background:
-        linear-gradient(135deg, rgba(106, 13, 173, 0.95), rgba(142, 68, 173, 0.95)),
+        linear-gradient(135deg, rgba(107, 13, 174, 0.95), rgba(142, 68, 173, 0.95)),
         repeating-linear-gradient(
             45deg,
             transparent,
@@ -90,7 +90,7 @@ main {
 
 
 #about h2 {
-    color: #6a0dad;
+    color: rgb (107, 13, 174);
     text-align: left;
     margin-bottom: 15px;
     font-size: 2rem;
@@ -157,26 +157,22 @@ main {
 }
 
 
-
-
-
-
-
-/* Mobile */
 @media (max-width: 768px) {
-    #about {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    nav ul {
         flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
+        align-items: center;
     }
 
-    #about h2 {
-        text-align: center;
-    }
-
-    #about img {
-        width: 250px;
-        height: auto;
+    nav li {
+        margin: 4px 0;
     }
 }
 
@@ -287,16 +283,32 @@ legend {
     font-weight: bold;
 }
 
-
-
-/* Footer */
 footer {
-    background-color: purple;
+    background: linear-gradient(135deg, #4b087a, #6a0dad);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
     margin-top: 30px;
+    border-top: 4px solid #b57edc;
 }
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+footer p::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #d8b4f8;
+    margin: 0 auto 12px;
+    border-radius: 10px;
+}
+
+
 
 
 /* TABLET AND PHONE */
