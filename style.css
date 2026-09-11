@@ -177,6 +177,26 @@ main {
 }
 
 
+/* Fun Facts */
+#fun-facts {
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #f5f0ff);
+}
+
+#fun-facts h2 {
+    color: #6a0dad;
+}
+
+#fact-text {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-left: 5px solid #6a0dad;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(106, 13, 173, 0.12);
+}
 
 
 

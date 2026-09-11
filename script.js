@@ -252,3 +252,19 @@ contactMessage.addEventListener("input", () => {
 });
 
 
+// Fun Facts API
+const factButton = document.querySelector("#fact-button");
+const factText = document.querySelector("#fact-text");
+
+factButton.addEventListener("click", () => {
+    factText.textContent = "Loading a fun fact...";
+
+    fetch("https://uselessfacts.jsph.pl/api/v2/facts/random")
+        .then(response => response.json())
+        .then(data => {
+            factText.textContent = data.text;
+        })
+        .catch(error => {
+            factText.textContent = "Sorry, I couldn't get a fun fact right now.";
+        });
+});
